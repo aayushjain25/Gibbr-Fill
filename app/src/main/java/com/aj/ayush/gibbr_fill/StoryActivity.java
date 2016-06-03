@@ -23,10 +23,4 @@ public class StoryActivity extends AppCompatActivity {
         storyTextView = (TextView) findViewById(R.id.text_view_story);
         storyTextView.setText(gUtil.replaceWords(GibbrUtil.GIBBR_FILL_FILE, words, StoryActivity.this));
     }
-
-    @Override
-    public void onBackPressed() {
-        startActivity(new Intent(this, TextFillActivity.class));
-    }
-
 }

@@ -62,7 +62,7 @@ public class TextFillActivity extends AppCompatActivity {
 
     }
 
-    public void addButtonListener() {
+    private void addButtonListener() {
         button = (Button) findViewById(R.id.button1);
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +73,7 @@ public class TextFillActivity extends AppCompatActivity {
                 else if (count == 1) {
                     count--;
                     words.add(editText.getText().toString());
+                    finish();
                     Intent intent = new Intent(TextFillActivity.this, StoryActivity.class);
                     intent.putExtra(WORDS_KEY, words);
                     TextFillActivity.this.startActivity(intent);
@@ -89,5 +90,4 @@ public class TextFillActivity extends AppCompatActivity {
             }
         });
     }
-
 }
