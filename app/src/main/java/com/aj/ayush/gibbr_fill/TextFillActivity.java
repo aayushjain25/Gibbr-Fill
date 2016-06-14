@@ -1,15 +1,19 @@
 package com.aj.ayush.gibbr_fill;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.transition.Fade;
 
 import java.util.ArrayList;
 
@@ -28,7 +32,9 @@ public class TextFillActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         setContentView(R.layout.activity_text_fill);
+        setupWindowAnimations();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -38,6 +44,7 @@ public class TextFillActivity extends AppCompatActivity {
         wordsTextView = (TextView)findViewById(R.id.text_view_fill_words);
         textInputLayout = (TextInputLayout) findViewById(R.id.input1);
 
+        //button.setEnabled(false);
         String text = gUtil.readFile(GibbrUtil.GIBBR_FILL_FILE, this);
         count = 0;
         total = 0;
@@ -61,6 +68,14 @@ public class TextFillActivity extends AppCompatActivity {
         addButtonListener();
 
     }
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    private void setupWindowAnimations() {
+
+        /*Fade fade = new Fade();
+        fade.setDuration(1000);
+        getWindow().setEnterTransition(fade);*/
+    }
+
 
     private void addButtonListener() {
         button = (Button) findViewById(R.id.button1);
