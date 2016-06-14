@@ -9,13 +9,13 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.aayushja.myapplication1.MainActivity"
+    tools:context="com.aj.ayush.gibbr_fill.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/gibbr_img" />
 
@@ -26,4 +26,23 @@
         android:textSize="@dimen/text_size_medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/login_activity_button"
+        android:layout_below="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/padding_top_large"
+        android:textColor="@color/white"
+        android:text="@string/login_activity" />
+    <Button
+        android:id="@+id/text_complete_activity_button"
+        android:layout_below="@+id/login_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/padding_top_large"
+        android:textColor="@color/white"
+        android:text="@string/auto_text_complete" />
 </RelativeLayout>
