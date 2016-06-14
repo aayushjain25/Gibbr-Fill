@@ -35,12 +35,7 @@
             app:fabSize="mini"
             android:tint="@color/colorAccent"
             android:src="@drawable/cross_icon" />
-        <!--<ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="72dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="24dp"
-            android:src="@drawable/gibbr_img" />-->
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

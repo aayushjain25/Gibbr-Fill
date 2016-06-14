@@ -23,7 +23,9 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".StoryActivity"></activity>
+        <activity android:name=".StoryActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".AutoCompleteActivity"></activity>
     </application>
 
 </manifest>
